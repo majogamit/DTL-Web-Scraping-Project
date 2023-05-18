@@ -6,6 +6,7 @@ This is a part of an internship screening process, and the code and its document
 
 ## Requirements
 The project uses Python 3.11.3.
+
 To install the required dependencies for this project, you can use the provided `requirements.txt` file. Make sure you have Python and pip installed on your system, and then follow these steps:
 
 1. Create a virtual environment (optional but recommended):
@@ -56,28 +57,15 @@ Example usages:
   python main.py --date 2023-05-17
   ```
 
+- Download files for a multiple specific date:
+  ```
+  python main.py --date 2022-01-17 2023-03-27
+  ```
+
 - Download files for a range of dates:
   ```
   python main.py --start-date 2023-05-15 --end-date 2023-05-17
   ```
-
-### Config File
-
-Instead of using command line options, you can also provide a config file (`config.ini`) in the following format:
-
-```ini
-[DownloadOptions]
-include_latest = True
-date = 2023-05-17
-```
-
-Use the `include_latest` option to specify whether to include the latest file, and `date` option to specify a specific date. Multiple dates can be provided by separating them with commas.
-
-Example usage:
-
-```
-python main.py --config config.ini
-```
 
 ## Project Structure
 
@@ -109,13 +97,3 @@ The script considers a recovery plan for handling various scenarios:
 - If the file download fails on one or more days, the script provides the ability to redownload the missed file(s) based on the specified dates or date range.
 - The redownloading process is automatic and does not require manual intervention. The script handles it based on the provided instructions.
 - Although the website only lists the recent files, the script can download older files by specifying the desired dates or date range.
-
-## How to Submit
-
-To submit your solution, please send a `.tar.gz` or `.zip` file containing all the relevant files to the email thread where you received the project instructions.
-
-If you have any questions or need clarification, please email careers@dytech
-
-lab.com.
-
-Thank you!
