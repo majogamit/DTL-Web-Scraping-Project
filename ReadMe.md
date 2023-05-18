@@ -1,6 +1,8 @@
-# File Downloader for 
+# DTL Data Team Mini-project
 
-This is a Python script designed to download specific files from the SGX website (https://www.sgx.com/research-education/derivatives). The script is intented to download daily derivative data files and provides options to include historical files or only download the latest file. The downloaded files are saved to the specified destination folder, and logging is implemented to track the download progress and debug any issues. This is a part of an internship screening process, and the code and its documentation are intended solely for evaluation purposes.
+This is a Python script designed to download specific files from the SGX website (https://www.sgx.com/research-education/derivatives). The script is intented to download daily derivative data files and provide options to include historical files or only download the latest file. The downloaded files are saved to the specified destination folder, and logging is implemented to track the download progress and debug any issues.
+
+This is a part of an internship screening process, and the code and its documentation are intended solely for evaluation purposes.
 
 ## Requirements
 The project uses Python 3.11.3.
