@@ -99,3 +99,5 @@ The script uses the built-in logging module provided by Python for flexible logg
 - [ ] Download log is implemented but the same shows up in terminal
 - [ ] downloading process involved looking at the direct link for download to access historical files.
 - [ ] the redownloading process is automatic 
+- [ ] schedule the program run if kaya
+
