@@ -90,10 +90,12 @@ The project structure is organized as follows:
 
 The script uses the built-in logging module provided by Python for flexible logging configurations. It logs messages with timestamps and levels to aid in debugging and issue resolution. The logs are saved to both the console (stdout) and a log file (`download.log`) in the current working directory.
 
-## Recovery Plan
 
-The script considers a recovery plan for handling various scenarios:
+# To do
 
-- If the file download fails on one or more days, the script provides the ability to redownload the missed file(s) based on the specified dates or date range.
-- The redownloading process is automatic and does not require manual intervention. The script handles it based on the provided instructions.
-- Although the website only lists the recent files, the script can download older files by specifying the desired dates or date range.
+[] Include explanation about dates that are already downloaded
+[] files that are checked and are missing, download whole set of files for that date again 
+[] for downloading ranges, checks if the date is a weekend or not. but take note that only until 2021 is correct for index computation.
+[] Download log is implemented but the same shows up in terminal
+[] downloading process involved looking at the direct link for download to access historical files.
+[] the redownloading process is automatic 
