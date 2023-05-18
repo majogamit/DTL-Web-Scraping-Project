@@ -93,9 +93,9 @@ The script uses the built-in logging module provided by Python for flexible logg
 
 # To do
 
-- [] Include explanation about dates that are already downloaded
-- [] files that are checked and are missing, download whole set of files for that date again 
-- [] for downloading ranges, checks if the date is a weekend or not. but take note that only until 2021 is correct for index computation.
-- [] Download log is implemented but the same shows up in terminal
-- [] downloading process involved looking at the direct link for download to access historical files.
-- [] the redownloading process is automatic 
+- [ ] Include explanation about dates that are already downloaded
+- [ ] files that are checked and are missing, download whole set of files for that date again 
+- [ ] for downloading ranges, checks if the date is a weekend or not. but take note that only until 2021 is correct for index computation.
+- [ ] Download log is implemented but the same shows up in terminal
+- [ ] downloading process involved looking at the direct link for download to access historical files.
+- [ ] the redownloading process is automatic 
