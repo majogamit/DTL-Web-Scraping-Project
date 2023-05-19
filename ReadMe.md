@@ -92,7 +92,7 @@ The script uses the built-in logging module provided by Python for flexible logg
 
 ## Scheduler
 
-The script uses the 'schedule' library in Python to schedule the execution of the download process at a specific time every day. The scheduling logic is in the file 'scheduler.py' file. 
+The script uses the 'schedule' library in Python to schedule the execution of the download process at a specific time every day. The scheduling logic is in the file 'scheduler.py' file.  
 Here is a sample usage if the  program needs to be executed everyday at a certain time:
 
 1. Run the script using the following command:
