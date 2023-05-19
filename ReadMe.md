@@ -5,20 +5,16 @@ This is a Python script designed to download specific files from the SGX website
 This is a part of an internship screening process, and the code and its documentation are intended solely for evaluation purposes.
 
 ## Requirements
-This project uses: 
-  - Python 3.11.3
-  - pip 22.3.1
-  - Requests 2.30.0
-  - schedule 1.2.0
+This project uses:
+- [Python 3.11.3](https://www.python.org/downloads/)
+- [pip 22.3.1](https://pip.pypa.io/en/stable/installing/)
+- [Requests 2.30.0](https://pypi.org/project/requests/)
+- [schedule 1.2.0](https://pypi.org/project/schedule/)
 
 To install the required dependencies for this project, use pip the provided `requirements.txt` file:
   ```bash
    pip install -r requirements.txt
    ```
-
-This will install all the required packages and their specific versions as listed in the `requirements.txt` file.
-
-Please note that the versions specified in the `requirements.txt` file are frozen at the time of project submission. It is recommended to verify and update the dependencies as necessary to ensure compatibility with your specific Python environment.
 
 ## Usage
 
