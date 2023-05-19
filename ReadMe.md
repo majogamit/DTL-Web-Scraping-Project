@@ -90,6 +90,27 @@ The project structure is organized as follows:
 
 The script uses the built-in logging module provided by Python for flexible logging configurations. It logs messages with timestamps and levels to aid in debugging and issue resolution. The logs are saved to both the console (stdout) and a log file (`download.log`) in the current working directory.
 
+## Scheduler
+
+The script uses the 'schedule' library in Python to schedule the execution of the download process at a specific time every day. The scheduling logic is in the file 'scheduler.py' file. 
+Here is a sample usage if the  program needs to be executed everyday at a certain time:
+
+1. Run the script using the following command:
+   ```
+   python scheduler.py --time <HH:MM>
+   ```
+   Replace `<HH:MM>` with your preferred time in the 24-hour format.
+   
+   For example, to schedule the job to run at 09:30, use:
+   ```
+   python scheduler.py --time 09:30
+   ```
+   
+   Note: If you don't provide the `--time` argument, the script will prompt you to enter a preferred time.
+2. The script will schedule the job to run at the specified time using the `schedule` library.
+3. The script will continuously check for pending jobs and run them accordingly.
+4. To stop the script, press `Ctrl + C`.
+
 ## Additional
 
  Features
@@ -101,4 +122,11 @@ The project includes the following additional features:
 - **Weekend Date Handling**: For downloading files within a range of dates, the script checks if each date falls on a weekend or not. Please note that the date index computation is only an approximation from the dates April 2013 until present.
 
 - **Download Log**: The script implements a download log, which is displayed in the terminal. It provides information about the progress of the download, including the files being downloaded.
+
+
+
+
+
+
+
 
