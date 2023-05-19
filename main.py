@@ -45,6 +45,14 @@ def main():
             dates = date
 
         for date in dates:
+             # Check if the date is in the future
+            if datetime.strptime(date, '%Y-%m-%d').date() == datetime.today().date():
+                logging.warning(f"{date} is today. The file is not yet available.")
+                continue
+            if datetime.strptime(date, '%Y-%m-%d') > datetime.today():
+                logging.warning(f"{date} is in the future. Skipping file download.")
+                continue
+            
             # Check if the date is a weekday
             if datetime.strptime(date, '%Y-%m-%d').weekday() < 5:
                 try:
