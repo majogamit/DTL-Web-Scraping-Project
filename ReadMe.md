@@ -94,9 +94,7 @@ Here is a sample usage if the  program needs to be executed everyday at a certai
 3. The script will continuously check for pending jobs and run them accordingly.
 4. To stop the script, press `Ctrl + C`.
 
-## Additional
-
- Features
+## Additional Features
 
 The project includes the following additional features:
 
@@ -104,7 +102,26 @@ The project includes the following additional features:
 
 - **Weekend Date Handling**: For downloading files within a range of dates, the script checks if each date falls on a weekend or not. Please note that the date index computation is only an approximation from the dates April 2013 until present.
 
-- **Download Log**: The script implements a download log, which is displayed in the terminal. It provides information about the progress of the download, including the files being downloaded.
+- **Download Log**: The script implements a download log, which is displayed in the terminal. It provides information about the progress of the download, including the files being downloaded. It also includes the warnings the the program encounters while running.
+
+- **Error Handling**: 
+Here is the text in Markdown format:
+
+  - **Failed to set up logging**: This error occurs if there is an issue while setting up the logging configuration, such as an `IOError` when trying to create a file handler for logging to a file.
+
+  - **Failed to download file from {url}**: This error message is logged when there is an error during the file download process, usually due to a network error or an unsuccessful request (non-2xx status code) when using the `requests` library.
+
+  - **Failed to calculate date index**: This error occurs if there is an issue while calculating the index associated with a date, such as a `ValueError` or `TypeError` when parsing or calculating the date.
+
+  - **Invalid start or end date**: This error message indicates that there is an error in the provided start or end date format or value when specifying a date range for file downloading.
+
+  - **Failed to download files for {date}**: This error message is logged when there is an error during the file download process for a specific date, indicating a failure in downloading one or more files.
+
+  - **An error occurred**: This error message is logged when an unhandled exception occurs in the script, indicating a general error condition.
+## Limitations
+
+The program does not check for any failed downloads automatically. However, if a date is specified in the command line argument, it will check if the set of files for that date are already downloaded, if not it will download.  
+
 
 
 
