@@ -5,27 +5,14 @@ This is a Python script designed to download specific files from the SGX website
 This is a part of an internship screening process, and the code and its documentation are intended solely for evaluation purposes.
 
 ## Requirements
-The project uses Python 3.11.3.
+This project uses: 
+  - Python 3.11.3
+  - pip 22.3.1
+  - Requests 2.30.0
+  - schedule 1.2.0
 
-To install the required dependencies for this project, you can use the provided `requirements.txt` file. Make sure you have Python and pip installed on your system, and then follow these steps:
-
-1. Create a virtual environment (optional but recommended):
-   ```bash
-   python -m venv myenv
-   ```
-
-2. Activate the virtual environment:
-   - For Windows:
-     ```bash
-     myenv\Scripts\activate
-     ```
-   - For macOS/Linux:
-     ```bash
-     source myenv/bin/activate
-     ```
-
-3. Install the dependencies from the `requirements.txt` file:
-   ```bash
+To install the required dependencies for this project, use pip the provided `requirements.txt` file:
+  ```bash
    pip install -r requirements.txt
    ```
 
