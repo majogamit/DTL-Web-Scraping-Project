@@ -120,6 +120,7 @@ The project includes the following additional features:
 ## Limitations
 
 The program does not check for any failed downloads automatically. However, if a date is specified in the command line argument, it will check if the set of files for that date are already downloaded, if not it will download.  
+There is also a limited date range for approximation.  The script approximates the date indices from April 2013 until the present. If the required dates fall outside this range, the date index calculation may not be accurate.
 
 
 
