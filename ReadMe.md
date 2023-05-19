@@ -105,7 +105,6 @@ The project includes the following additional features:
 - **Download Log**: The script implements a download log, which is displayed in the terminal. It provides information about the progress of the download, including the files being downloaded. It also includes the warnings the the program encounters while running.
 
 - **Error Handling**: 
-Here is the text in Markdown format:
 
   - **Failed to set up logging**: This error occurs if there is an issue while setting up the logging configuration, such as an `IOError` when trying to create a file handler for logging to a file.
 
