@@ -7,11 +7,11 @@ This is a part of an internship screening process, and the code and its document
 ## Requirements
 This project uses:
 - [Python 3.11.3](https://www.python.org/downloads/)
-- [pip 22.3.1](https://pip.pypa.io/en/stable/installing/)
+- [pip 22.3.1](https://pip.pypa.io/en/stable/installation/)
 - [Requests 2.30.0](https://pypi.org/project/requests/)
 - [schedule 1.2.0](https://pypi.org/project/schedule/)
 
-To install the required dependencies for this project, use pip the provided `requirements.txt` file:
+To install the required dependencies for this project, use pip and the provided `requirements.txt` file:
   ```bash
    pip install -r requirements.txt
    ```
