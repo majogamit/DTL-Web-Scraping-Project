@@ -102,5 +102,3 @@ The project includes the following additional features:
 
 - **Download Log**: The script implements a download log, which is displayed in the terminal. It provides information about the progress of the download, including the files being downloaded.
 
-
-Please feel free to reach out if you have any further questions or need assistance with the project.
