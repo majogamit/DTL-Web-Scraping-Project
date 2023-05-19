@@ -1,6 +1,6 @@
 # DTL Data Team Mini-project
 
-This is a Python script designed to download specific files from the SGX website (https://www.sgx.com/research-education/derivatives). The script is intented to download daily derivative data files and provide options to include historical files or only download the latest file. The downloaded files are saved to the specified destination folder, and logging is implemented to track the download progress and debug any issues.
+This is a Python script designed to download specific files from the SGX website (https://www.sgx.com/research-education/derivatives). The script is intended to download daily derivative data files and provide options to include historical files or only download the latest file. The downloaded files are saved to the specified destination folder, and logging is implemented to track the download progress and debug any issues.
 
 This is a part of an internship screening process, and the code and its documentation are intended solely for evaluation purposes.
 
@@ -57,7 +57,7 @@ Example usages:
   python main.py --date 2023-05-17
   ```
 
-- Download files for a multiple specific date:
+- Download files for multiple specific dates:
   ```
   python main.py --date 2022-01-17 2023-03-27
   ```
@@ -90,14 +90,17 @@ The project structure is organized as follows:
 
 The script uses the built-in logging module provided by Python for flexible logging configurations. It logs messages with timestamps and levels to aid in debugging and issue resolution. The logs are saved to both the console (stdout) and a log file (`download.log`) in the current working directory.
 
+## Additional
 
-# To do
+ Features
 
-- [ ] Include explanation about dates that are already downloaded
-- [ ] files that are checked and are missing, download whole set of files for that date again 
-- [ ] for downloading ranges, checks if the date is a weekend or not. but take note that only until 2021 is correct for index computation.
-- [ ] Download log is implemented but the same shows up in terminal
-- [ ] downloading process involved looking at the direct link for download to access historical files.
-- [ ] the redownloading process is automatic 
-- [ ] schedule the program run if kaya
+The project includes the following additional features:
 
+- **Checking for Existing Files**: The script checks if the specified date folder already exists in the destination folder. If it exists, the script further checks if all the files for that date have already been downloaded. If all the files are downloaded, the script skips the download process for that date. However, if any file is missing, the script downloads the entire set of files in that folder again.
+
+- **Weekend Date Handling**: For downloading files within a range of dates, the script checks if each date falls on a weekend or not. Please note that the date index computation is only an approximation from the dates April 2013 until present.
+
+- **Download Log**: The script implements a download log, which is displayed in the terminal. It provides information about the progress of the download, including the files being downloaded.
+
+
+Please feel free to reach out if you have any further questions or need assistance with the project.
