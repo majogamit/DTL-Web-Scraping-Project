@@ -60,7 +60,12 @@ def download_files(base_url, download_path, date_index, date):
     for file_url, file_name in files_to_download:
         file_url = f"{base_url}/{date_index}/{file_url}"
         file_path = os.path.join(download_path, file_name)
-        download_file(file_url, file_path, date)
+        try:
+            download_file(file_url, file_path, date)
+        except Exception as e:
+            logging.error(f"Failed to download file: {e}")
+            continue
+            raise
 
     logging.info("File download completed.")
 
@@ -75,11 +80,15 @@ def date_index(date):
     Returns:
         int: The index associated with the date.
     """
-    start_date = datetime.strptime('2013-04-08', '%Y-%m-%d')
-    end_date = datetime.strptime(date, '%Y-%m-%d')
-    days_difference = (end_date - start_date).days
-    weekdays = sum(1 for i in range(days_difference) if (start_date + timedelta(days=i)).weekday() < 5)
-    return weekdays + 2756 + 28
+    try:
+        start_date = datetime.strptime('2013-04-08', '%Y-%m-%d')
+        end_date = datetime.strptime(date, '%Y-%m-%d')
+        days_difference = (end_date - start_date).days
+        weekdays = sum(1 for i in range(days_difference) if (start_date + timedelta(days=i)).weekday() < 5)
+        return weekdays + 2756 + 28
+    except (ValueError, TypeError) as e:
+        logging.error(f"Failed to calculate date index: {e}")
+        raise
 
 
 def check_folder_complete(folder_path, date):

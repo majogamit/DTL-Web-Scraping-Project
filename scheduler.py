@@ -4,10 +4,16 @@ import subprocess
 import argparse
 
 def run_process():
-    subprocess.run(['python', 'main.py'])
+    try:
+        subprocess.run(['python', 'main.py'])
+    except Exception as e:
+        print(f"Error running the process: {e}")
 
 def schedule_job(time_str):
-    schedule.every().day.at(time_str).do(run_process)
+    try:
+        schedule.every().day.at(time_str).do(run_process)
+    except Exception as e:
+        print(f"Error scheduling the job: {e}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Scheduler Configuration')
@@ -20,6 +26,11 @@ if __name__ == "__main__":
     else:
         print("Please provide a preferred time using the --time argument (HH:MM format)")
 
-    while True:
-        schedule.run_pending()
-        time.sleep(1)
+    try:
+        while True:
+            schedule.run_pending()
+            time.sleep(1)
+    except KeyboardInterrupt:
+        print("Scheduler stopped by user")
+    except Exception as e:
+        print(f"An error occurred: {e}")
