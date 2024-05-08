@@ -2,7 +2,6 @@
 
 This is a Python script designed to download specific files from the SGX website (https://www.sgx.com/research-education/derivatives). The script is intended to download daily derivative data files and provide options to include historical files or only download the latest file. The downloaded files are saved to the specified destination folder, and logging is implemented to track the download progress and debug any issues.
 
-This is a part of an internship screening process, and the code and its documentation are intended solely for evaluation purposes.
 
 ## Requirements
 This project uses:
